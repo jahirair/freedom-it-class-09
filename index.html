@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS onInput and onChange</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+ <h1>Advance JS- Freedom IT</h1>   
+ <h3>oninput and onchange in JS</h3>   
+<div class="oninput">
+<p><span>Rule-01:</span> oninput event occurs immediately after the value of an element has changed.</p>
+  <h4>kg to ton</h4>  
+<label for="kgInput">Put how many kg you want to convert</label>
+<input type="text" id="kgInput" oninput="myFunction()">
+
+<p id="demo"></p>
+</div>
+<hr>
+<div class="onchange">
+
+<p><span>Rule-02:</span> onchange occurs when the element loses focus, after the content has been changed.</p>
+ <h4>kg to ton</h4>   
+<label for="kgInput2">Put how many kg you want to convert and click outside</label>
+<input type="text" id="kgInput2" onchange="myFunction2()">
+
+<p id="demo2"></p>
+</div>
+
+</div>
+
+<script>
+function myFunction() {
+  var mykg = document.getElementById("kgInput").value;
+    var ton=mykg/1000;
+  document.getElementById("demo").innerHTML = mykg +" kg " +" = " +ton +" ton" ;
+    
+}
+function myFunction2() {
+  var mykg2 = document.getElementById("kgInput2").value;
+    var ton2=mykg2/1000;
+  document.getElementById("demo2").innerHTML = mykg2 +" kg " +" = " +ton2 +" ton" ;
+    
+}
+   
+</script>
+</body>
+</html>
